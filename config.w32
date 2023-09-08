@@ -1,0 +1,8 @@
+ARG_ENABLE('shutdown', 'shutdown support', 'no');
+
+if (PHP_SHUTDOWN != 'no') {
+	AC_DEFINE('HAVE_SHUTDOWN', 1, 'shutdown support enabled');
+
+	EXTENSION('shutdown', 'shutdown.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+	ADD_SOURCES(configure_module_dirname, "wshutdown.c", "shutdown");
+}

@@ -1,0 +1,8 @@
+/.svn
+/x64
+/config.nice.bat
+/configure.bat
+/configure.js
+/Makefile
+/Makefile.objects
+/run-tests.php
